@@ -5376,9 +5376,12 @@
                                     <img:DsImage ImageReference="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SystemMenuImage}" />
                                 </ctrls:SysMenuButton>
                                 <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" WindowChrome.IsHitTestVisibleInChrome="True">
-                                    <ctrls:WinSysButton x:Name="minButton" WinSysType="Minimize" Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ShowMinimizeButton, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                    <ctrls:WinSysButton x:Name="maxButton" WinSysType="Maximize" Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ShowMaximizeButton, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                    <ctrls:WinSysButton x:Name="closeButton" WinSysType="Close" Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ShowCloseButton, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                    <ctrls:WinSysButton x:Name="minButton" WinSysType="Minimize" Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ShowMinimizeButton, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                        ctrls2:MetroWindow.IsMinimizeButton="True"/>
+                                    <ctrls:WinSysButton x:Name="maxButton" WinSysType="Maximize" Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ShowMaximizeButton, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                        ctrls2:MetroWindow.IsMaximizeButton="True"/>
+                                    <ctrls:WinSysButton x:Name="closeButton" WinSysType="Close" Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ShowCloseButton, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                        ctrls2:MetroWindow.IsCloseButton="True"/>
                                 </StackPanel>
                                 <TextBlock
                                     Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title}"
